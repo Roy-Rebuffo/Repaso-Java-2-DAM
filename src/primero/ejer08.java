@@ -38,31 +38,26 @@ public class ejer08 {
 		/*if(!traductor.containsKey("Azul")) {
 			traductor.put("Azul", "Blue");
 		}*/
+		String cont;
 		
-		System.out.print("Escriba una palabra: ");
-		String res = sc.nextLine();
-		
-		if(!traductor.containsKey(res)) {
-			System.out.println("Añada traduccion");
-			String trad = sc.nextLine();
-			traductor.put(res, trad);
-		}else {
-			System.out.println(traductor.get(res));
-		}
-		
-		
-		
-		/*
-		for(Entry<String, String> c : traductor.entrySet()) {//Acceder a la clave y al valor mediante la colección Entry
+		do {
+			System.out.print("Escriba una palabra: ");
+			String res = sc.nextLine();
 			
-			while (!encontrada) {
-				System.out.println("Añada palabra traducción al diccionario");
-				String newRes = sc.nextLine();
-				traductor.put(res, newRes);
-				break;
+			if(!traductor.containsKey(res)) {
+				System.out.println("Añada traduccion");
+				String trad = sc.nextLine();
+				traductor.put(res, trad);
+				System.out.println("Palabras en el diccionario: ");
+				for(Entry<String, String> c : traductor.entrySet())
+					System.out.println(c.getKey() + c.getValue());
+				
+			}else {
+				System.out.println("Traducción: " + traductor.get(res));
 			}
-		}*/
+			System.out.print("Desea introducir otra palabra? s/n");
+			cont = sc.nextLine().trim().toLowerCase();
 		
+		} while(cont.equals("s"));
 	}
-
 }
