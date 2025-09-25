@@ -14,12 +14,11 @@ public class Circulo extends FiguraGeometrica {
 
 	@Override
 	public double area() {
-		return Math.PI*Math.pow(dato1,2); //2 por pi por radio al cuadrado
+		return Math.PI*Math.pow(dato1,2); //pi por radio al cuadrado
 	}
 
 	@Override
 	public String toString() {
 		return "Circulo ->" + super.toString();
 	}
-
 }

@@ -29,7 +29,7 @@ public class Rectangulo extends FiguraGeometrica {
 
 	@Override
 	public String toString() {
-		return "Rectángulo dato1 = " + dato1 + "dato2 = " + dato2;
+		return "Rectángulo dato1 = " + dato1 + " dato2 = " + dato2;
 	}
 
 	
